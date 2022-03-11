@@ -10,6 +10,8 @@ public class Student {
 		this.name = name;
 		courses = new Vector<Course>();
 	}
+	
+	//면담
 	public void setAdvisor(Professor advisor) {
 		this.advisor = advisor;
 	}
@@ -22,6 +24,8 @@ public class Student {
 		courses.add(course);
 	}
 	
+	
+	// 수강관련
 	public void dropCourse(Course course) {
 		if(courses.contains(course))
 			courses.remove(course);
@@ -30,16 +34,5 @@ public class Student {
 	public Vector<Course> getCourses(){
 		return courses;
 	}
-	
-	public class Course{
-		private String name;
-		
-		public Course(String name) {
-			this.name = name;
-		}
-		
-		public String getName() {
-			return name;
-		}
-	}
+
 }
