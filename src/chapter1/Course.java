@@ -2,23 +2,24 @@ package chapter1;
 import java.util.Vector;
 
 public class Course {
-	private Vector<Student> students;
+	private Vector<Transcript> transcripts;
 	private String name;
 	
 	
 	public Course(String name) {
 		this.name = name;
-		students = new Vector<Student>();
+		transcripts = new Vector<Transcript>();
 	}
 	
-	public void addStudent(Student student) {
-		students.add(student);
+	public void addTranscript(Transcript transcript) {
+		transcripts.add(transcript);
 	}
 	
-	public void removeStudent(Student student) {
-		if(students.contains(student))
-			students.remove(student);
+	public String getName() {
+		return name;
 	}
 	
-	public 
+	public Vector<Transcript> getTranscripts(){
+		return transcripts;
+	}
 }
